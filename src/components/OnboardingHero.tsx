@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import trampoAkiLogo from "@/assets/trampo-aki-logo.png";
 import heroImage from "@/assets/hero-image.jpg";
 
 export const OnboardingHero = () => {
@@ -13,24 +14,26 @@ export const OnboardingHero = () => {
           alt="Freelancers trabalhando"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-success/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/90 via-primary/70 to-primary-dark/80"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 text-center text-white">
         <div className="max-w-4xl mx-auto animate-fade-in">
           {/* Logo */}
-          <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
-              <MapPin className="w-7 h-7 text-white" />
-            </div>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <img 
+              src={trampoAkiLogo} 
+              alt="Trampo Aki" 
+              className="w-16 h-16 rounded-xl object-cover shadow-floating"
+            />
             <h1 className="text-4xl md:text-5xl font-bold">Trampo Aki</h1>
           </div>
 
           {/* Headline */}
           <h2 className="text-2xl md:text-4xl font-bold mb-6 leading-tight">
             Conecte-se com freelancers <br />
-            <span className="text-success-light">próximos a você</span>
+            <span className="text-white/90">próximos a você</span>
           </h2>
           
           <p className="text-lg md:text-xl mb-12 text-white/90 max-w-2xl mx-auto leading-relaxed">

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MapPin, User, MessageCircle, Bell, Menu } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import trampoAkiLogo from "@/assets/trampo-aki-logo.png";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,10 +12,12 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-hero rounded-lg flex items-center justify-center">
-              <MapPin className="w-5 h-5 text-white" />
-            </div>
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src={trampoAkiLogo} 
+              alt="Trampo Aki" 
+              className="w-10 h-10 rounded-lg object-cover"
+            />
             <h1 className="text-xl font-bold text-foreground">Trampo Aki</h1>
           </Link>
 

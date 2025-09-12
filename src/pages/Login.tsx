@@ -3,8 +3,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MapPin, Mail, Lock, User, Phone, Building } from "lucide-react";
+import { Mail, Lock, User as UserIcon, Phone, Building } from "lucide-react";
 import { Link } from "react-router-dom";
+import trampoAkiLogo from "@/assets/trampo-aki-logo.png";
 
 const Login = () => {
   return (
@@ -13,9 +14,11 @@ const Login = () => {
         {/* Logo */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
-              <MapPin className="w-7 h-7 text-white" />
-            </div>
+            <img 
+              src={trampoAkiLogo} 
+              alt="Trampo Aki" 
+              className="w-12 h-12 rounded-xl object-cover shadow-floating"
+            />
             <h1 className="text-3xl font-bold text-white">Trampo Aki</h1>
           </div>
           <p className="text-white/80">Entre na sua conta ou cadastre-se</p>
@@ -80,7 +83,7 @@ const Login = () => {
                 {/* User Type Selection */}
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   <Button variant="outline" className="h-20 flex-col gap-2">
-                    <User className="w-6 h-6" />
+                    <UserIcon className="w-6 h-6" />
                     <span className="text-xs">Sou Freelancer</span>
                   </Button>
                   <Button variant="outline" className="h-20 flex-col gap-2">
@@ -93,7 +96,7 @@ const Login = () => {
                   <div className="space-y-2">
                     <Label htmlFor="name">Nome completo</Label>
                     <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+                      <UserIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
                       <Input id="name" placeholder="Seu nome completo" className="pl-10" />
                     </div>
                   </div>
