@@ -27,6 +27,9 @@ export const Header = () => {
               <MapPin className="w-4 h-4" />
               Mapa
             </Link>
+            <Link to="/download" className="text-muted-foreground hover:text-primary transition-colors font-medium">
+              Download App
+            </Link>
             <a href="#messages" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2">
               <MessageCircle className="w-4 h-4" />
               Mensagens
@@ -72,6 +75,9 @@ export const Header = () => {
               <Link to="/map" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 p-2">
                 <MapPin className="w-4 h-4" />
                 Mapa
+              </Link>
+              <Link to="/download" className="text-muted-foreground hover:text-primary transition-colors font-medium p-2">
+                Download App
               </Link>
               <a href="#messages" className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2 p-2">
                 <MessageCircle className="w-4 h-4" />
